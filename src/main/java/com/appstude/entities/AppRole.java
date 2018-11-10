@@ -6,18 +6,46 @@ import java.util.Collection;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
 
-import lombok.*;
+
+
 
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor
+@Table(name="ROLES")
 public class AppRole implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY )
 	private Long id;
 	private String roleName;
+	
+	public AppRole(){
+		
+	}
+
+	public AppRole(Long id, String roleName) {
+		super();
+		this.id = id;
+		this.roleName = roleName;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+	
+	
 	
 }

@@ -38,15 +38,18 @@ public class JwtSpringSecurityApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		accountService.addUser(new AppUser(null, "admin", "1234", null));
-		accountService.addUser(new AppUser(null, "user", "1234", null));
+		/*accountService.addUser(new AppUser(null, "admin", "ad123", null));
+		accountService.addUser(new AppUser(null, "user", "usr123", null));
+		accountService.addUser(new AppUser(null, "manager", "mg1234", null));
 		
 		accountService.addRole(new AppRole(null, "ADMIN"));
 		accountService.addRole(new AppRole(null, "USER"));
+		accountService.addRole(new AppRole(null, "MANAGER"));
 		
 		accountService.addRoleToUser("admin", "ADMIN");
 		accountService.addRoleToUser("admin", "USER");
 		accountService.addRoleToUser("user", "USER");
+		accountService.addRoleToUser("manager", "MANAGER");
 		
 		
 		
@@ -60,7 +63,7 @@ public class JwtSpringSecurityApplication implements CommandLineRunner {
 		
 		taskRepository.findAll().forEach(t->{
 			System.out.println("************* : "+t.getTaskName());
-		});
+		});*/
 		
 	
 		
